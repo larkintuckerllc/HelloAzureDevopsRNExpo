@@ -44,8 +44,8 @@ steps:
     actions: 'build' 
     configuration: 'Release'
     sdk: 'iphoneos12.2'
-    xcWorkspacePath: 'ios/HelloAzureDevopsRN.xcodeproj'
-    scheme: 'HelloAzureDevopsRN'
+    xcWorkspacePath: 'ios/hello-azure-devopsrnexpo.xcodeproj'
+    scheme: 'hello-azure-devopsrnexpo'
     xcodeVersion: 'default'
     #xcodeDeveloperDir: # Optional
     packageApp: false
