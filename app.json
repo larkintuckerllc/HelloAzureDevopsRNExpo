@@ -23,7 +23,11 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.larkintuckerllc.helloazuredevopsrnexpo",
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.larkintuckerllc.helloazuredevopsrnexpo"
     }
   }
 }
