@@ -21,8 +21,11 @@ steps:
 - script: npm install -g expo-cli
   displayName: 'Install Expo CLI'
 
+- script: expo login -u ${EXPO_USERNAME} -p ${EXPO_PASSWORD}
+  displayName: 'Expo login'
+
 - script: expo eject --eject-method expokit --non-interactive
-  displayName: 'Expo Eject'
+  displayName: 'Expo eject'
 
 - script: cd ios && pods install && cd ..
   displayName: 'Install pods'
