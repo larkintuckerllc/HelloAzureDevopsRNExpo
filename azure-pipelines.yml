@@ -27,5 +27,5 @@ steps:
 - script: expo eject --eject-method expokit --non-interactive
   displayName: 'Expo eject'
 
-- script: cd ios && pods install && cd ..
+- script: cd ios && pod install && cd ..
   displayName: 'Install pods'
