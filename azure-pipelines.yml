@@ -7,13 +7,22 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'macOS-10.14'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.15.3'
+  displayName: 'Install Node'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- script: yarn install
+  displayName: 'Install Node dependencies'
+
+- script: npm install -g expo-cli
+  displayName: 'Install Expo CLI'
+
+- script: expo eject --eject-method expokit --non-interactive
+  displayName: 'Expo Eject'
+
+- script: cd ios && pods install && cd ..
+  displayName: 'Install pods'
