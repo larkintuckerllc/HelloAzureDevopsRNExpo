@@ -27,6 +27,12 @@ steps:
 - script: expo eject --eject-method expokit --non-interactive
   displayName: 'Expo eject'
 
+- script: sudo gem uninstall cocoapods
+  displayName: 'Uninstall cocoapods'
+
+- script: sudo gem install cocoapods -v 1.5.3
+  displayName: 'Install cocoapods 1.5.3'
+
 - script: cd ios && pod install && cd ..
   displayName: 'Install pods'
 
